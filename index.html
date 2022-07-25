@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='./styles.css'>
+ </head>
+  <body>
+    <div class='leftNav-box'>
+      <h2 class='ideaBoxTitle'>IdeaBox</h2>
+      <h4 class='filterStarred'> Fliter Starred Ideas</h4>
+      <button class='showStarred'>Show Starred Ideas</button>
+    </div>
+    <div class='inputForm'>
+      <label for='title'>Title</label>
+      <br>
+      <input class='title' name='title' size='15' maxlength='30' />
+      <br>
+      <label for='bodyForm'>Body</label>
+      <br>
+      <input class='bodyForm' name='bodyForm' size='15' maxlength='30' />
+      <br>
+      <button type='submit' class='saveButton'>Save</button>
+      <br>
+      <button type='search' class='searchButton'><img src='Assets/search.svg'/></button>
+      <input class='searchBar' type='search' name='search'>
+    </div>
+    <div class='cardsContainer'>
+      <article class='ideaCards'>
+        <section class='starBar'></section>
+        <section class='cardbody'></section>
+            <h2 class='ideaTitle'>Idea title</h2>
+            <h2 class='ideaBody'>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion!, Cloth talk.</h2>
+        <section class='commentBar'></section>
+      </article>
+    </div>
+  </body>
+  <script type='text/javascript' src='main.js'></script>
+  <script src='idea.js'></script>
+</html>

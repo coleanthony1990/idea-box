@@ -9,3 +9,51 @@
     "leftNav-box cardsContainer cardsContainer"
     "leftNav-box cardsContainer cardsContainer";
 }
+/*----------------LEFT NAV-------------------*/
+.leftNav-box {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans';
+  grid-area: leftNav-box;
+  background-color: #1F1F3D;
+
+}
+
+.ideaBoxTitle {
+  font-family: 'Open Sans';
+  color: #E9E9F3;
+  font-weight: bold;
+  padding-left: 18px
+}
+
+.filterAndButton{
+
+}
+.filterStarred{
+  color: #BFBFDD;
+  border: 2px solid #353567;
+  padding-left:18px;
+  padding-bottom: 25px;
+}
+
+.showStarredButton{
+  height: 30px;
+  width: 95%;
+  border: none;
+  color: #E9E9F3;
+  background-color:#5356A4;
+  font-size: 120%;
+  font-family: 'Open Sans';
+
+}
+
+.container * {
+  border: 1px solid red;
+  position: relative;
+}*/
+
+
+html, body , .container {
+  height: 100%;
+  margin: 0;
+}

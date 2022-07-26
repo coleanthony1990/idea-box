@@ -1,26 +1,32 @@
 <html>
   <head>
     <link rel='stylesheet' href='./styles.css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
  </head>
   <body>
+    <div class='container'>
     <div class='leftNav-box'>
       <h2 class='ideaBoxTitle'>IdeaBox</h2>
-      <h4 class='filterStarred'> Fliter Starred Ideas</h4>
-      <button class='showStarred'>Show Starred Ideas</button>
+    <section class= 'filterAndButton'>
+      <section class='filterStarred'><h5> Fliter Starred Ideas</h5>
+          <button class='showStarredButton'>Show Starred Ideas</button>
+      </section>
+     </section>
     </div>
     <div class='inputForm'>
-      <label for='title'>Title</label>
-      <br>
+      <label for='title' id='title'>Title</label>
+
       <input class='title' name='title' size='15' maxlength='30' />
       <br>
-      <label for='bodyForm'>Body</label>
-      <br>
+      <label for='bodyForm' id='body'>Body</label>
       <input class='bodyForm' name='bodyForm' size='15' maxlength='30' />
       <br>
       <button type='submit' class='saveButton'>Save</button>
       <br>
+      <form class='searchForm'>
       <button type='search' class='searchButton'><img src='Assets/search.svg'/></button>
-      <input class='searchBar' type='search' name='search'>
+      <input class='searchBar' type='search' placeholder='Search ideas' name='search'>
+      </form>
     </div>
     <div class='cardsContainer'>
       <article class='ideaCards'>
@@ -30,6 +36,7 @@
             <h2 class='ideaBody'>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion!, Cloth talk.</h2>
         <section class='commentBar'></section>
       </article>
+      </div>
     </div>
   </body>
   <script type='text/javascript' src='main.js'></script>

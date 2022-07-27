@@ -149,31 +149,30 @@ html, body , .container {
 
 .ideaCardsGrid{
   display: flex;
-  width: 175px;
-  height: inherit;
+  width: 100%;
+  height: auto;
   flex-direction: column;
   background-color: #FFFFFF;
   border: 2px solid #1F1F3D;
   justify-content: space-between;
-
-
 }
 
-header{
+header, footer{
   display: flex;
   justify-content: space-between;
   background-color: #1F1F3D;
-  height: 25px;
+  height: 30px;
   width: 100%;
-
+  align-items: center;
 }
 
 footer{
   background-color: #5356A4;
   color: #E9E9F3;
+  border-top: 2px solid #1F1F3D;
   display: flex;
   justify-content: flex-start;
-
+  align-items: center;
 }
 
 h2{
@@ -189,18 +188,22 @@ p{
 }
 
 .commentButton{
-  background-color: #535684;
+  background-color: transparent;
+  border: none;
+  font-size: 120%;
+  padding: 0px;
+  margin: 0px;
+}
+.starButton {
+  background-color: transparent;
+  border: none;
+
+}
+
+.deleteButton {
+  background-color: transparent;
+  border: none;
   color: #FFFFFF;
-  overflow: hidden;
-  height: 3vw;
-  width: 3vw;
-  padding: 0;
-  margin-top: 10px;
-  border:none;
-  cursor: pointer;
-
-
-
 }
 
 
@@ -209,8 +212,7 @@ p{
 
 
 
-
-/*.container * {
+/* .container * {
   border: 1px solid red;
   position: relative;
-  }*/
+  } */

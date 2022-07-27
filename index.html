@@ -1,44 +1,56 @@
 <html>
-  <head>
-    <link rel='stylesheet' href='./styles.css'>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
- </head>
-  <body>
-    <div class='container'>
+
+<head>
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='http://fonts.cdnfonts.com/css/open-sans' rel="stylesheet">
+</head>
+
+<body>
+  <div class='container'>
     <div class='leftNav-box'>
       <h2 class='ideaBoxTitle'>IdeaBox</h2>
-    <section class= 'filterAndButton'>
-      <section class='filterStarred'><h5> Fliter Starred Ideas</h5>
+      <section class='filterAndButton'>
+        <section class='filterStarred'>
+          <h5> Fliter Starred Ideas</h5>
           <button class='showStarredButton'>Show Starred Ideas</button>
+        </section>
       </section>
-     </section>
     </div>
     <div class='inputForm'>
-      <label for='title' id='title'>Title</label>
-
-      <input class='title' name='title' size='15' maxlength='30' />
-      <br>
-      <label for='bodyForm' id='body'>Body</label>
-      <input class='bodyForm' name='bodyForm' size='15' maxlength='30' />
-      <br>
-      <button type='submit' class='saveButton'>Save</button>
-      <br>
-      <form class='searchForm'>
-      <button type='search' class='searchButton'><img src='Assets/search.svg'/></button>
-      <input class='searchBar' type='search' placeholder='Search ideas' name='search'>
-      </form>
+      <section class='box'>
+        <label for='title' id='title'>Title</label>
+        <input class='title' name='title' size='15' maxlength='30' />
+        <br>
+        <label for='bodyForm' id='body'>Body</label>
+        <input class='bodyForm' name='bodyForm' size='15' maxlength='30' />
+        <br>
+        <button type='submit' class='saveButton'>Save</button>
+        <br>
+        <form class='searchForm'>
+          <button type='search' class='searchButton'><img src='Assets/search.svg' /></button>
+          <input class='searchBar' type='search' placeholder='Search ideas' name='search'>
+        </form>
+      </section>
     </div>
     <div class='cardsContainer'>
-      <article class='ideaCards'>
-        <section class='starBar'></section>
-        <section class='cardbody'></section>
-            <h2 class='ideaTitle'>Idea title</h2>
-            <h2 class='ideaBody'>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion!, Cloth talk.</h2>
-        <section class='commentBar'></section>
+      <article class='ideaCardsGrid' id=''>
+        <header>
+          <button class='starImg' id='starImg'><img src='Assets/star.svg' /></button>
+          <button class='deleteButton' id='deleteButton'><img src='Assets/delete.svg' /></button>
+        </header>
+        <section class='cardBody'>
+          <h2>Idea Title</h2>
+          <p>Dont ever play yourself, every chance i get i water the plants AHHHHHHHHHHHHHHHHHH</p>
+        </section>
+        <footer>
+          <button class='commentButton' id='commentButton'><img src='Assets/comment.svg' /></button>
+          <label for='commentButton'>Comment</label>
+        </footer>
       </article>
-      </div>
     </div>
-  </body>
-  <script type='text/javascript' src='main.js'></script>
-  <script src='idea.js'></script>
+  </div>
+</body>
+<script type='text/javascript' src='main.js'></script>
+<script src='idea.js'></script>
+
 </html>

@@ -58,6 +58,7 @@ html, body , .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 .box{
   font-family: 'Open Sans';

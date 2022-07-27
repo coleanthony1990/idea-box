@@ -25,13 +25,10 @@
   font-weight: bold;
   padding-left: 18px
 }
-
-.filterAndButton{
-
-}
 .filterStarred{
   color: #BFBFDD;
-  border: 2px solid #353567;
+  border-top: 2px solid #353567;
+  border-bottom: 2px solid #353567;
   padding-left:18px;
   padding-bottom: 25px;
   font-size: 1.5vw;
@@ -39,13 +36,12 @@
 
 .showStarredButton{
   height: 30px;
-  width: 95%;
+  width: 90%;
   border: none;
   color: #E9E9F3;
   background-color:#5356A4;
   font-size: 1.2vw;
   font-family: 'Open Sans';
-
 }
 
 
@@ -143,6 +139,7 @@ html, body , .container {
   grid-template-columns: repeat(3,1fr);
   grid-gap: 20px;
   padding: 20px;
+  flex-wrap: wrap;
 
 
 }

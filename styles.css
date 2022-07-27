@@ -144,30 +144,64 @@ html, body , .container {
   grid-gap: 20px;
   padding: 20px;
 
+
 }
 
 .ideaCardsGrid{
   display: flex;
   width: 175px;
-  height: 175px;
-  justify-content: space-between;
+  height: inherit;
   flex-direction: column;
   background-color: #FFFFFF;
-  border-color: 2px solid #1F1F3D
-
-}
-
-.ideaCard header{
-  background-color: #1F1F3D;
-  display: flex;
+  border: 2px solid #1F1F3D;
   justify-content: space-between;
 
-}
-.ideaCard footer{
-  background-color: #5356A4;
-  color: #E9E9F3;
+
 }
 
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: #1F1F3D;
+  height: 25px;
+  width: 100%;
+
+}
+
+footer{
+  background-color: #5356A4;
+  color: #E9E9F3;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+h2{
+  font-size: 2vw;
+  margin-left: 15px;
+}
+
+p{
+  margin: 15px;
+  font-size: 1.5vw;
+  overflow-wrap: break-word;
+
+}
+
+.commentButton{
+  background-color: #535684;
+  color: #FFFFFF;
+  overflow: hidden;
+  height: 3vw;
+  width: 3vw;
+  padding: 0;
+  margin-top: 10px;
+  border:none;
+  cursor: pointer;
+
+
+
+}
 
 
 

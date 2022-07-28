@@ -1,12 +1,3 @@
-class Idea {
-  constructor(title, body) {
-    this.id = Date.now();
-    this.title = title;
-    this.body = body;
-    this.star = false;
-  }
-}
-
 //Query selectors------------>
 var titleInput = document.querySelector('.title')
 var bodyInput = document.querySelector('.bodyForm')

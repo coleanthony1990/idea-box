@@ -6,7 +6,8 @@ var ideaGrid = document.querySelector('.ideaCardsGrid')
 var cardsContainer = document.querySelector('.cardsContainer')
 
 
-
+window.onload = saveButton.classList.remove('disabled-save-btn')
+window.onload = saveButton.disabled = false
 
 
 
@@ -29,17 +30,29 @@ saveButton.addEventListener('click', addCard);
 //Functions------------------>
 
 
+ function disableButton(){
+   if(titleInput.value && bodyInput.value !=""){
+     saveButton.classList.remove('disabled-save-btn')
+     saveButton.disabled = false
+   } else {
+     saveButton.classList.add('disabled-save-btn')
+     saveButton.disabled = true
+   }
+ }
+
+
 function createIdea() {
   var newCard = new Idea(titleInput.value, bodyInput.value);
   collection.push(newCard)
-
   return newCard
 }
 
 function addCard(){
   var newIdea = createIdea()
   makeCard(newIdea)
-    console.log(newIdea.title)
+  titleInput.value = ""
+  bodyInput.value = ""
+  disableButton()
 }
 
 function makeCard(newIdea){
@@ -59,8 +72,3 @@ function makeCard(newIdea){
   </article>`
   )
 }
-
-//We want to instantiate a new Idea class with the input value from titleInput and bodyInput.
-//We then want to take that new Idea object and put it in an array.
-//We then want to change the innerText of the cards based on the contents of the array.
-//

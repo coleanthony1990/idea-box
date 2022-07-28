@@ -141,8 +141,6 @@ html, body , .container {
   grid-gap: 20px;
   padding: 20px;
   flex-wrap: wrap;
-
-
 }
 
 .ideaCardsGrid{
@@ -191,17 +189,19 @@ p{
   font-size: 120%;
   padding: 0px;
   margin: 0px;
+  cursor: pointer;
 }
 .starButton {
   background-color: transparent;
   border: none;
-
+  cursor:pointer;
 }
 
 .deleteButton {
   background-color: transparent;
   border: none;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 

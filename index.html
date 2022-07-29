@@ -1,10 +1,9 @@
-<html>
-
+<!DOCTYPEhtml>
+<html lang='en'>
 <head>
   <link rel='stylesheet' href='./styles.css'>
   <link href='http://fonts.cdnfonts.com/css/open-sans' rel="stylesheet">
 </head>
-
 <body>
   <div class='container'>
     <div class='leftNav-box'>
@@ -18,13 +17,10 @@
     <div class='inputForm'>
       <section class='box'>
         <label for='title' id='title'>Title</label>
-        <input class='title' name='title' size='15' maxlength='30' />
-        <br>
+        <input class='title' name='title' size='15' maxlength='100' />
         <label for='bodyForm' id='body'>Body</label>
-        <input class='bodyForm' name='bodyForm' size='15' maxlength='30' />
-        <br>
+        <input class='bodyForm' name='bodyForm' size='15' maxlength='250'/>
         <button type='submit' class='saveButton'>Save</button>
-        <br>
         <form class='searchForm'>
           <button type='search' class='searchButton'><img src='Assets/search.svg' /></button>
           <input class='searchBar' type='search' placeholder='Search ideas' name='search'>
@@ -46,23 +42,9 @@
           <label for='commentButton'>Comment</label>
         </footer>
       </article>
-      <article class='ideaCardsGrid' id=''>
-        <header>
-          <button class='starButton' id='starButton'><img src='Assets/star.svg' width='35px'/></button>
-          <button class='deleteButton' id='deleteButton'><img src='Assets/delete.svg' width='35px'/></button>
-        </header>
-        <section class='cardBody'>
-          <h2>Idea Title</h2>
-          <p>Dont ever play yourself, every chance i get i water the plants AHHHHHHHHHHHHHHHHHH</p>
-        </section>
-        <footer>
-          <button type='button' class='commentButton' id='commentButton'><img src='Assets/comment.svg' width= '35px'/></button>
-          <label for='commentButton'>Comment</label>
-        </footer>
-      </article>
     </div>
   </div>
 </body>
 <script type='text/javascript' src='main.js'></script>
-<script type=type='text/javascript' src='idea.js'></script>
+<script type='text/javascript' src='idea.js'></script>
 </html>

@@ -5,10 +5,7 @@ class Idea {
     this.body = body;
     this.star = false;
   }
-  saveTolocal(){
-
-  }
-  removeFromLocal(){
-    
+  updateIdea() {
+    this.star = true;
   }
 }

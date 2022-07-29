@@ -4,10 +4,10 @@ var bodyInput = document.querySelector('.bodyForm')
 var saveButton = document.querySelector('.saveButton')
 var ideaGrid = document.querySelector('.ideaCardsGrid')
 var cardsContainer = document.querySelector('.cardsContainer')
+var inputForm = document.querySelector('.inputForm')
 
-
-window.onload = saveButton.classList.remove('disabled-save-btn')
-window.onload = saveButton.disabled = false
+window.onload = saveButton.classList.add('disabled-save-btn')
+window.onload = saveButton.disabled = true
 
 
 
@@ -16,22 +16,12 @@ window.onload = saveButton.disabled = false
 var collection = [];
 //Event Listeners------------>
 saveButton.addEventListener('click', addCard);
-
-
-
-
-
-
-
-
-
-
+inputForm.addEventListener('keyup', disableButton)
 
 //Functions------------------>
 
-
  function disableButton(){
-   if(titleInput.value && bodyInput.value !=""){
+   if (titleInput.value && bodyInput.value != ""){
      saveButton.classList.remove('disabled-save-btn')
      saveButton.disabled = false
    } else {
@@ -39,6 +29,8 @@ saveButton.addEventListener('click', addCard);
      saveButton.disabled = true
    }
  }
+
+
 
 
 function createIdea() {

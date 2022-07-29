@@ -70,7 +70,7 @@ html, body , .container {
 }
 
 .title{
-  width: 100%;
+  width: 98%;
   height: 40px;
   border: 2px solid #5356A4;
   border-radius: 1px;
@@ -78,7 +78,7 @@ html, body , .container {
 }
 
 .bodyForm{
-  width: 100%;
+  width: 98%;
   height: 80px;
   border: 2px solid #5356A4;
   border-radius: 1px;
@@ -98,7 +98,7 @@ html, body , .container {
 }
 
 .disabled-save-btn{
-  background-color:#785C9C;
+  background-color:#9F9FCA;
   cursor:default;
 
 }

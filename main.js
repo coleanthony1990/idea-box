@@ -118,3 +118,11 @@ function updateCard(event){
           }
       }
     }
+    function activateStar(){
+      console.log('hi')
+      event.target.src= redStar
+    }
+
+    function deActivateStar(){
+      event.target.src= whiteStar
+    }

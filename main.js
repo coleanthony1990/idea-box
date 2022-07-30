@@ -41,16 +41,16 @@ function addCard() {
   disableButton()
 }
 
-function makeCard(newIdea){
+function makeCard(newIdea) {
   var starImg = ''
   cardsContainer.innerHTML = ''
-    for (var i = 0; i < collection.length; i++) {
-      if (collection[i].star) {
-     starImg= "./Assets/star-active.svg"
-   } else {
-     starImg= "./Assets/star.svg"
-   }
-      cardsContainer.innerHTML += `<article class='ideaCardsGrid' id='${collection[i].id}'>
+  for (var i = 0; i < collection.length; i++) {
+    if (collection[i].star) {
+      starImg = "./Assets/star-active.svg"
+    } else {
+      starImg = "./Assets/star.svg"
+    }
+    cardsContainer.innerHTML += `<article class='ideaCardsGrid' id='${collection[i].id}'>
     <header>
       <button class='starButton ${collection[i].star}'><img class='starButton' id='${collection[i].id}' src='${starImg}' width='35px'/></button>
       <button class='deleteButton' id='${collection[i].id}'><img class='deleteButton' id='${collection[i].id}' src='Assets/delete.svg' width='35px'/></button>
@@ -64,7 +64,7 @@ function makeCard(newIdea){
       <label for='commentButton'>Comment</label>
     </footer>
   </article>`
-}
+  }
 }
 
 function deleteCard(event) {
@@ -86,10 +86,10 @@ function updateCard(event) {
 }
 
 function activateStarButton(event) {
-    for (var i = 0; i < collection.length; i++) {
-      if (collection[i].id === parseInt(event.target.id)) {
-        collection[i].star = !collection[i].star
-        makeCard()
-      }
+  for (var i = 0; i < collection.length; i++) {
+    if (collection[i].id === parseInt(event.target.id)) {
+      collection[i].star = !collection[i].star
+      makeCard()
     }
   }
+}

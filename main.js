@@ -7,6 +7,7 @@ var cardsContainer = document.querySelector('.cardsContainer')
 var inputForm = document.querySelector('.inputForm')
 
 
+
 window.onload = saveButton.classList.add('disabled-save-btn')
 window.onload = saveButton.disabled = true
 
@@ -51,55 +52,52 @@ function addCard(){
 }
 
 function makeCard(newIdea){
-  cardsContainer.insertAdjacentHTML("afterbegin", `<article class='ideaCardsGrid' id='${newIdea.id}'>
+  cardsContainer.innerHTML = ''
+  for (var i = 0; i < collection.length; i++) {
+  cardsContainer.innerHTML += `<article class='ideaCardsGrid' id='${collection[i].id}'>
     <header>
-      <button class='starButton ${newIdea.star}' id='starButton'><img class='starButton ${newIdea.star}' src='Assets/star.svg' width='35px'/></button>
-      <button class='deleteButton' id='deleteButton'><img class='deleteButton' src='Assets/delete.svg' width='35px'/></button>
+      <button class='starButton ${collection[i].star}' id='${collection[i].id}'><img class='starButton ${collection[i].star}' src='Assets/star.svg' width='35px'/></button>
+      <button class='deleteButton' id='${collection[i].id}'><img class='deleteButton' id='${collection[i].id}' src='Assets/delete.svg' width='35px'/></button>
     </header>
     <section class='cardBody'>
-      <h2>${newIdea.title}</h2>
-      <p>${newIdea.body}</p>
+      <h2>${collection[i].title}</h2>
+      <p>${collection[i].body}</p>
     </section>
     <footer>
       <button type='button' class='commentButton' id='commentButton'><img src='Assets/comment.svg' width= '35px'/></button>
       <label for='commentButton'>Comment</label>
     </footer>
   </article>`
-  )
-  
 }
+}
+function deleteCard(event){
 
-function starButton() {
-  console.log('hello')
-  var newCard = new Idea(titleInput.value, bodyInput.value);
-  if (event.target.classList.contains('starButton false')){
-  newCard.updateIdea();
-    console.log('bye bye')
+  console.log(event.target)
+    for(var i = 0; i < collection.length; i++){
+      console.log(collection[i].id)
+      if (collection[i].id === parseInt(event.target.id)) {
+
+     collection.splice(i, 1)// removes the data from the array
+   }
   }
-
+ makeCard()
 }
-
-
-function deleteCard(){
-  if(event.target.classList.contains('deleteButton')){
-    event.target.closest('article').remove()
-    for (var i = 0; i < collection.length; i++) {
-      collection.splice(i,1)
-    }
-  }
-}
-
 function updateCard(){
-   if (event.target.classList.contains('starButton false')){
-     starButton(event)
-     console.log('hello')
-   }
-   if (event.target.classList.contains('starButton true')){
-     starButton(event)
-     console.log('good-bye')
-   }
-  if (event.target.classList.contains('deleteButton')){
+  // if (event.target.id) {
+  //    starButton(event)
+  //  }
+  if (event.target.classList.contains('deleteButton')) {
     deleteCard(event)
-    console.log('deletebutton')
   }
+  }
+function starButton(){
+  var newCard = new Idea(titleInput.value, bodyInput.value);
+  if (newCard.star === false) {
+    newCard.updateIdea()
+      // document.getElementById("Assets/star-active.svg").src = img.src.replace("_t", "_b");
+
+  } else if (newCard.star === true) {
+      newCard.reverseIdea()
+  }
+  console.log(newCard.star)
   }

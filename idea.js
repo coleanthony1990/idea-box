@@ -8,4 +8,7 @@ class Idea {
   updateIdea() {
     this.star = true;
   }
+  reverseIdea() {
+    this.star = false;
+  }
 }

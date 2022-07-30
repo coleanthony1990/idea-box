@@ -18,7 +18,7 @@ var collection = [];
 //Event Listeners------------>
 saveButton.addEventListener('click', addCard);
 inputForm.addEventListener('keyup', disableButton)
-cardsContainer.addEventListener('click', deleteCard)
+cardsContainer.addEventListener('click', updateCard)
 
 //Functions------------------>
 
@@ -34,6 +34,7 @@ cardsContainer.addEventListener('click', deleteCard)
 
 
 
+//var newCard = new Idea(titleInput.value, bodyInput.value);
 
 function createIdea() {
   var newCard = new Idea(titleInput.value, bodyInput.value);
@@ -52,7 +53,7 @@ function addCard(){
 function makeCard(newIdea){
   cardsContainer.insertAdjacentHTML("afterbegin", `<article class='ideaCardsGrid' id='${newIdea.id}'>
     <header>
-      <button class='starButton star-${newIdea.star}' id='starButton'><img src='Assets/star.svg' width='35px'/></button>
+      <button class='starButton ${newIdea.star}' id='starButton'><img class='starButton ${newIdea.star}' src='Assets/star.svg' width='35px'/></button>
       <button class='deleteButton' id='deleteButton'><img class='deleteButton' src='Assets/delete.svg' width='35px'/></button>
     </header>
     <section class='cardBody'>
@@ -65,12 +66,19 @@ function makeCard(newIdea){
     </footer>
   </article>`
   )
+  
 }
 
-// function starButton(event) {
-//    event.target.className.contains('star-true')
-//   //   idea.updateIdea();
-//     console.log('hello')
+function starButton() {
+  console.log('hello')
+  var newCard = new Idea(titleInput.value, bodyInput.value);
+  if (event.target.classList.contains('starButton false')){
+  newCard.updateIdea();
+    console.log('bye bye')
+  }
+
+}
+
 
 function deleteCard(){
   if(event.target.classList.contains('deleteButton')){
@@ -80,3 +88,18 @@ function deleteCard(){
     }
   }
 }
+
+function updateCard(){
+   if (event.target.classList.contains('starButton false')){
+     starButton(event)
+     console.log('hello')
+   }
+   if (event.target.classList.contains('starButton true')){
+     starButton(event)
+     console.log('good-bye')
+   }
+  if (event.target.classList.contains('deleteButton')){
+    deleteCard(event)
+    console.log('deletebutton')
+  }
+  }

@@ -56,7 +56,7 @@ function makeCard(newIdea){
   for (var i = 0; i < collection.length; i++) {
   cardsContainer.innerHTML += `<article class='ideaCardsGrid' id='${collection[i].id}'>
     <header>
-      <button class='starButton ${collection[i].star}' id='${collection[i].id}'><img class='starButton ${collection[i].star}' src='Assets/star.svg' width='35px'/></button>
+      <button class='starButton ${collection[i].star}'><img class='starButton' id='${collection[i].id}' src='${whiteStar}' width='35px'/></button>
       <button class='deleteButton' id='${collection[i].id}'><img class='deleteButton' id='${collection[i].id}' src='Assets/delete.svg' width='35px'/></button>
     </header>
     <section class='cardBody'>

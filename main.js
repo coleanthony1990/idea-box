@@ -1,4 +1,4 @@
-//Query selectors------------>
+//Query selectors and global variables ------------>
 var titleInput = document.querySelector('.title')
 var bodyInput = document.querySelector('.bodyForm')
 var saveButton = document.querySelector('.saveButton')
@@ -6,36 +6,26 @@ var ideaGrid = document.querySelector('.ideaCardsGrid')
 var cardsContainer = document.querySelector('.cardsContainer')
 var inputForm = document.querySelector('.inputForm')
 
-
-
 window.onload = saveButton.classList.add('disabled-save-btn')
 window.onload = saveButton.disabled = true
 
-
-
-
-
 var collection = [];
+
 //Event Listeners------------>
 saveButton.addEventListener('click', addCard);
 inputForm.addEventListener('keyup', disableButton)
 cardsContainer.addEventListener('click', updateCard)
 
 //Functions------------------>
-
- function disableButton(){
-   if (titleInput.value && bodyInput.value != ""){
-     saveButton.classList.remove('disabled-save-btn')
-     saveButton.disabled = false
-   } else {
-     saveButton.classList.add('disabled-save-btn')
-     saveButton.disabled = true
-   }
- }
-
-
-
-//var newCard = new Idea(titleInput.value, bodyInput.value);
+function disableButton() {
+  if (titleInput.value && bodyInput.value != "") {
+    saveButton.classList.remove('disabled-save-btn')
+    saveButton.disabled = false
+  } else {
+    saveButton.classList.add('disabled-save-btn')
+    saveButton.disabled = true
+  }
+}
 
 function createIdea() {
   var newCard = new Idea(titleInput.value, bodyInput.value);
@@ -43,7 +33,7 @@ function createIdea() {
   return newCard
 }
 
-function addCard(){
+function addCard() {
   var newIdea = createIdea()
   makeCard(newIdea)
   titleInput.value = ""
@@ -52,11 +42,17 @@ function addCard(){
 }
 
 function makeCard(newIdea){
+  var starImg = ''
   cardsContainer.innerHTML = ''
-  for (var i = 0; i < collection.length; i++) {
-  cardsContainer.innerHTML += `<article class='ideaCardsGrid' id='${collection[i].id}'>
+    for (var i = 0; i < collection.length; i++) {
+      if (collection[i].star) {
+     starImg= "./Assets/star-active.svg"
+   } else {
+     starImg= "./Assets/star.svg"
+   }
+      cardsContainer.innerHTML += `<article class='ideaCardsGrid' id='${collection[i].id}'>
     <header>
-      <button class='starButton ${collection[i].star}' id='${collection[i].id}'><img class='starButton ${collection[i].star}' src='Assets/star.svg' width='35px'/></button>
+      <button class='starButton ${collection[i].star}'><img class='starButton' id='${collection[i].id}' src='${starImg}' width='35px'/></button>
       <button class='deleteButton' id='${collection[i].id}'><img class='deleteButton' id='${collection[i].id}' src='Assets/delete.svg' width='35px'/></button>
     </header>
     <section class='cardBody'>
@@ -70,34 +66,30 @@ function makeCard(newIdea){
   </article>`
 }
 }
-function deleteCard(event){
 
-  console.log(event.target)
-    for(var i = 0; i < collection.length; i++){
-      console.log(collection[i].id)
-      if (collection[i].id === parseInt(event.target.id)) {
-
-     collection.splice(i, 1)// removes the data from the array
-   }
+function deleteCard(event) {
+  for (var i = 0; i < collection.length; i++) {
+    if (collection[i].id === parseInt(event.target.id)) {
+      collection.splice(i, 1)
+      makeCard()
+    }
   }
- makeCard()
 }
-function updateCard(){
-  // if (event.target.id) {
-  //    starButton(event)
-  //  }
+
+function updateCard(event) {
+  if (event.target.classList.contains('starButton')) {
+    activateStarButton(event)
+  }
   if (event.target.classList.contains('deleteButton')) {
     deleteCard(event)
   }
-  }
-function starButton(){
-  var newCard = new Idea(titleInput.value, bodyInput.value);
-  if (newCard.star === false) {
-    newCard.updateIdea()
-      // document.getElementById("Assets/star-active.svg").src = img.src.replace("_t", "_b");
+}
 
-  } else if (newCard.star === true) {
-      newCard.reverseIdea()
-  }
-  console.log(newCard.star)
+function activateStarButton(event) {
+    for (var i = 0; i < collection.length; i++) {
+      if (collection[i].id === parseInt(event.target.id)) {
+        collection[i].star = !collection[i].star
+        makeCard()
+      }
+    }
   }

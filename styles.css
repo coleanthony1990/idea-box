@@ -44,8 +44,6 @@
   font-family: 'Open Sans';
 }
 
-
-
 html, body , .container {
   height: 100%;
   margin: 0;
@@ -207,14 +205,3 @@ p{
   color: #FFFFFF;
   cursor: pointer;
 }
-
-
-
-
-
-
-
- /*.container * {
-  border: 1px solid red;
-  position: relative;
-  } */

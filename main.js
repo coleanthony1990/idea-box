@@ -101,3 +101,20 @@ function updateCard(event){
         }
       }
     }
+
+    function changeStar(){
+        console.log('human')
+        for (var i = 0; i < collection.length; i++) {
+          console.log(collection[i].star)
+          if (collection[i].star === false){
+            collection[i].star = true
+            console.log(collection[i].star)
+            activateStar()
+          } else {
+           collection[i].star === true
+            collection[i].star = false
+            deActivateStar()
+            console.log('dog')
+          }
+      }
+    }

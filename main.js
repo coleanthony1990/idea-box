@@ -90,3 +90,14 @@ function updateCard(event){
     deleteCard(event)
   }
   }
+
+  function activateStarButton(event){
+    console.log('beast')
+       for (var i = 0; i < collection.length; i++) {
+        console.log(collection[i])
+        if (collection[i].id === parseInt(event.target.id)) {
+          console.log(collection[i].id)
+          changeStar()
+        }
+      }
+    }

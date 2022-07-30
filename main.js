@@ -9,8 +9,6 @@ var inputForm = document.querySelector('.inputForm')
 window.onload = saveButton.classList.add('disabled-save-btn')
 window.onload = saveButton.disabled = true
 
-var whiteStar = 'Assets/star.svg'
-var redStar = 'Assets/star-active.svg'
 var collection = [];
 
 //Event Listeners------------>
@@ -43,12 +41,18 @@ function addCard() {
   disableButton()
 }
 
-function makeCard() {
+function makeCard(newIdea) {
+  var starImg = ''
   cardsContainer.innerHTML = ''
   for (var i = 0; i < collection.length; i++) {
+    if (collection[i].star) {
+      starImg = "./Assets/star-active.svg"
+    } else {
+      starImg = "./Assets/star.svg"
+    }
     cardsContainer.innerHTML += `<article class='ideaCardsGrid' id='${collection[i].id}'>
     <header>
-      <button class='starButton ${collection[i].star}'><img class='starButton' id='${collection[i].id}' src='${whiteStar}' width='35px'/></button>
+      <button class='starButton ${collection[i].star}'><img class='starButton' id='${collection[i].id}' src='${starImg}' width='35px'/></button>
       <button class='deleteButton' id='${collection[i].id}'><img class='deleteButton' id='${collection[i].id}' src='Assets/delete.svg' width='35px'/></button>
     </header>
     <section class='cardBody'>
@@ -67,9 +71,9 @@ function deleteCard(event) {
   for (var i = 0; i < collection.length; i++) {
     if (collection[i].id === parseInt(event.target.id)) {
       collection.splice(i, 1)
+      makeCard()
     }
   }
-  makeCard()
 }
 
 function updateCard(event) {
@@ -84,28 +88,8 @@ function updateCard(event) {
 function activateStarButton(event) {
   for (var i = 0; i < collection.length; i++) {
     if (collection[i].id === parseInt(event.target.id)) {
-      changeStar()
+      collection[i].star = !collection[i].star
+      makeCard()
     }
   }
-}
-
-function changeStar() {
-  for (var i = 0; i < collection.length; i++) {
-    if (collection[i].star === false) {
-      collection[i].star = true
-      activateStar()
-    } else {
-      collection[i].star === true
-      collection[i].star = false
-      deActivateStar()
-    }
-  }
-}
-
-function activateStar() {
-  event.target.src = redStar
-}
-
-function deActivateStar() {
-  event.target.src = whiteStar
 }

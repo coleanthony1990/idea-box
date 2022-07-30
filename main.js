@@ -82,22 +82,11 @@ function deleteCard(event){
   }
  makeCard()
 }
-function updateCard(){
-  // if (event.target.id) {
-  //    starButton(event)
-  //  }
+function updateCard(event){
+  if (event.target.classList.contains('starButton')) {
+     activateStarButton(event)
+   }
   if (event.target.classList.contains('deleteButton')) {
     deleteCard(event)
   }
-  }
-function starButton(){
-  var newCard = new Idea(titleInput.value, bodyInput.value);
-  if (newCard.star === false) {
-    newCard.updateIdea()
-      // document.getElementById("Assets/star-active.svg").src = img.src.replace("_t", "_b");
-
-  } else if (newCard.star === true) {
-      newCard.reverseIdea()
-  }
-  console.log(newCard.star)
   }

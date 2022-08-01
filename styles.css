@@ -13,14 +13,18 @@
 .leftNav-box {
   display: flex;
   flex-direction: column;
-  font-family: 'Open Sans';
+  font-family: open-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   grid-area: leftNav-box;
   background-color: #1F1F3D;
 
 }
 
 .ideaBoxTitle {
-  font-family: 'Open Sans';
+  font-family: open-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: #E9E9F3;
   font-weight: bold;
   padding-left: 18px
@@ -32,6 +36,9 @@
   padding-left:18px;
   padding-bottom: 25px;
   font-size: 1.5vw;
+  font-family: open-sans, sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .showStarredButton{
@@ -40,8 +47,10 @@
   border: none;
   color: #E9E9F3;
   background-color:#5356A4;
-  font-size: 1.2vw;
-  font-family: 'Open Sans';
+  font-size: 1.0vw;
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html, body , .container {
@@ -50,7 +59,9 @@ html, body , .container {
 }
 /*-------Input---------------*/
 .inputForm {
-  font-family: 'Open Sans';
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   grid-area: inputForm;
   background-color: #A9AAD2;
   display: flex;
@@ -59,7 +70,9 @@ html, body , .container {
   justify-content: space-around;
 }
 .box{
-  font-family: 'Open Sans';
+  font-family: open-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   grid-area: inputForm;
   background-color: #A9AAD2;
   display: flex;
@@ -93,6 +106,9 @@ html, body , .container {
   border-radius: 1px;
   margin-bottom: 20px;
   cursor: pointer;
+  font-family: open-sans, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .disabled-save-btn{
@@ -136,7 +152,7 @@ html, body , .container {
 
 .cardsContainer{
   display: grid;
-  font-family: 'open sans';
+  font-family: open-sans, sans-serif;
   grid-area: cardsContainer;
   background-color: #EAEAF4;
   grid-template-columns: repeat(3,1fr);

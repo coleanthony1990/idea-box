@@ -6,16 +6,14 @@ var ideaGrid = document.querySelector('.ideaCardsGrid')
 var cardsContainer = document.querySelector('.cardsContainer')
 var inputForm = document.querySelector('.inputForm')
 
-window.onload = saveButton.classList.add('disabled-save-btn')
-window.onload = saveButton.disabled = true
-
-var collection = [];
-
+var collection = []
 //Event Listeners------------>
-saveButton.addEventListener('click', addCard);
+saveButton.addEventListener('click', addCard)
 inputForm.addEventListener('keyup', disableButton)
 cardsContainer.addEventListener('click', updateCard)
 
+window.onload = saveButton.classList.add('disabled-save-btn')
+window.onload = saveButton.disabled = true
 //Functions------------------>
 function disableButton() {
   if (titleInput.value && bodyInput.value != "") {
@@ -28,7 +26,7 @@ function disableButton() {
 }
 
 function createIdea() {
-  var newCard = new Idea(titleInput.value, bodyInput.value);
+  var newCard = new Idea(titleInput.value, bodyInput.value)
   collection.push(newCard)
   return newCard
 }
@@ -41,7 +39,7 @@ function addCard() {
   disableButton()
 }
 
-function makeCard(newIdea) {
+function makeCard() {
   var starImg = ''
   cardsContainer.innerHTML = ''
   for (var i = 0; i < collection.length; i++) {

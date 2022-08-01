@@ -18,7 +18,6 @@
   font-style: normal;
   grid-area: leftNav-box;
   background-color: #1F1F3D;
-
 }
 
 .ideaBoxTitle {
@@ -29,7 +28,8 @@
   font-weight: bold;
   padding-left: 18px
 }
-.filterStarred{
+
+.filterStarred {
   color: #BFBFDD;
   border-top: 2px solid #353567;
   border-bottom: 2px solid #353567;
@@ -41,10 +41,10 @@
   font-style: normal;
 }
 
-.showStarredButton{
+.showStarredButton {
   height: 30px;
   width: 90%;
-  border: none;
+  border: 0;
   color: #E9E9F3;
   background-color:#5356A4;
   font-size: 1.0vw;
@@ -69,7 +69,8 @@ html, body , .container {
   align-items: center;
   justify-content: space-around;
 }
-.box{
+
+.box {
   font-family: open-sans, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -80,23 +81,23 @@ html, body , .container {
   overflow: hidden;
 }
 
-.title{
-  width: 98%;
+.title {
+  width: 97%;
   height: 40px;
   border: 2px solid #5356A4;
   border-radius: 1px;
   margin-bottom: 20px;
 }
 
-.bodyForm{
-  width: 98%;
+.bodyForm {
+  width: 97%;
   height: 80px;
   border: 2px solid #5356A4;
   border-radius: 1px;
   margin-bottom: 20px;
 }
 
-.saveButton{
+.saveButton {
   background-color: #353567;
   color: #E9E9F3;
   border: 2px solid #535684 ;
@@ -111,13 +112,11 @@ html, body , .container {
   font-style: normal;
 }
 
-.disabled-save-btn{
+.disabled-save-btn {
   background-color:#9F9FCA;
   cursor:default;
 
 }
-
-
 /*-------------Search--------------*/
 .searchForm{
   display: flex;
@@ -143,14 +142,14 @@ html, body , .container {
   width: 40px;
   padding: 0;
   margin: 0;
-  border:none;
+  border: 0;
   border-radius: inherit;
   background-color: #353567;
   cursor: pointer;
 }
 /*--------------Cards---------------*/
 
-.cardsContainer{
+.cardsContainer {
   display: grid;
   font-family: open-sans, sans-serif;
   grid-area: cardsContainer;
@@ -161,7 +160,7 @@ html, body , .container {
   flex-wrap: wrap;
 }
 
-.ideaCardsGrid{
+.ideaCardsGrid {
   display: flex;
   width: 100%;
   height: auto;
@@ -171,7 +170,7 @@ html, body , .container {
   justify-content: space-between;
 }
 
-header, footer{
+header, footer {
   display: flex;
   justify-content: space-between;
   background-color: #1F1F3D;
@@ -180,7 +179,7 @@ header, footer{
   align-items: center;
 }
 
-footer{
+footer {
   background-color: #5356A4;
   color: #E9E9F3;
   border-top: 2px solid #1F1F3D;
@@ -189,21 +188,21 @@ footer{
   align-items: center;
 }
 
-h2{
+h2 {
   font-size: 2vw;
   margin-left: 15px;
 }
 
-p{
+p {
   margin: 15px;
   font-size: 1.5vw;
   overflow-wrap: break-word;
 
 }
 
-.commentButton{
+.commentButton {
   background-color: transparent;
-  border: none;
+  border: 0;
   font-size: 120%;
   padding: 0px;
   margin: 0px;
@@ -211,13 +210,13 @@ p{
 }
 .starButton {
   background-color: transparent;
-  border: none;
+  border: 0;
   cursor:pointer;
 }
 
 .deleteButton {
   background-color: transparent;
-  border: none;
+  border: 0;
   color: #FFFFFF;
   cursor: pointer;
 }
